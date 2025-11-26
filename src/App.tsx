@@ -743,18 +743,7 @@ export default function App() {
           </button>
           <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">Mi Empresa S.A</h1>
           <div className="flex gap-2">
-            <button
-              onClick={async () => {
-                if (confirm('¿Recargar datos de ejemplo? Esto borrará todos los datos actuales.')) {
-                  localStorage.clear();
-                  await populateSampleData();
-                  window.location.reload();
-                }
-              }}
-              className="px-3 py-1 text-xs bg-white/20 hover:bg-white/30 text-white rounded-lg transition"
-            >
-              Recargar Datos
-            </button>
+
             <button
               className="p-2 text-white hover:bg-white/20 rounded-lg transition relative"
               aria-label="Notificaciones"
@@ -886,4 +875,5 @@ export default function App() {
       )}
     </div>
   );
+
 }
